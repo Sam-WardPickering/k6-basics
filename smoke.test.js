@@ -13,6 +13,6 @@ export default function () {
 
     check(response, {
         'status is 200': (r) => r.status === 200,
-        'response time < 500ms': (r) => r.timings.duration < 1000,
+        'response time < 1000ms': (r) => r.timings.duration < 1000,
     });
 };
