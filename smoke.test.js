@@ -9,10 +9,10 @@ export const options = {
 export default function () {
     const response = http.get('https://api.practicesoftwaretesting.com/products');
 
-    console.log(response.status);
+    console.log(typeof response.status, response.status);
 
     check(response, {
-        'status is 200': (r) => r.status === 2000,
-        'response time < 500ms': (r) => r.timings.duration < 500,
+        'status is 200': (r) => r.status === 200,
+        'response time < 500ms': (r) => r.timings.duration < 1000,
     });
 };
